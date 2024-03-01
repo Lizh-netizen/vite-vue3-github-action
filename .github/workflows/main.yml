@@ -16,6 +16,6 @@ jobs:
       - name: install
         run: pnpm install
       - name: build
-        uses: pnpm build
+        run: pnpm build
   
           
