@@ -11,7 +11,7 @@ jobs:
           node-version: 18.x
           cache: pnpm
           cache-dependency-path: pnpm-lock.yaml
-      - name: Checkout
+      - name: checkout
         uses: actions/checkout@v4.1.1
       - name: install
         run: pnpm install
