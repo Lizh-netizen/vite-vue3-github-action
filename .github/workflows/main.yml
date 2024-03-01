@@ -5,13 +5,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
-        run: echo Hello, world
-      - name: cache
-        run: echo Hello, world
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4.0.2
+        with:
+          node-version: 18.x
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+      - name: Checkout
+        uses: actions/checkout@v4.1.1
       - name: install
-        run: echo Hello, world
+        run: pnpm install
       - name: build
-        run: echo Hello, world
-      - name: publish
-        run: echo Hello, world
+        uses: pnpm build
+  
+          
