@@ -1,0 +1,17 @@
+name: "demo-action"
+on:
+  workflow_dispatch
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        run: echo Hello, world
+      - name: cache
+        run: echo Hello, world
+      - name: install
+        run: echo Hello, world
+      - name: build
+        run: echo Hello, world
+      - name: publish
+        run: echo Hello, world
